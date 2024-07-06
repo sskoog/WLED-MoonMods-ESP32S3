@@ -1,0 +1,6 @@
+[env:custom_build]
+extends = env:esp32s3dev_8MB_PSRAM_opi
+build_flags = ${env:esp32s3dev_8MB_PSRAM_opi.build_flags} -D USERMOD_PWM_FAN -D USERMOD_DALLASTEMPERATURE -D USERMOD_PWM_OUTPUTS
+lib_deps = 
+  ${env:esp32s3dev_8MB_PSRAM_opi.lib_deps}
+  OneWire@~2.3.7
